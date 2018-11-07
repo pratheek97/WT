@@ -12,18 +12,43 @@ function closeForm2()
 document.getElementById("myForm2").style.display="none";	
 }
 
-function openForm(){
-	document.getElementById("myForm").style.display="block";
-	
+function openForm()
+{
+	var x = document.getElementById("myForm");
+    		if (x.style.display === "none") 
+			{
+        			x.style.display = "block";
+    			} 
+		else 
+			{
+        			x.style.display = "none";
+    			}
 }
 
 function openForm1(){
-	document.getElementById("myForm1").style.display="block";
+	var x = document.getElementById("myForm1");
+    		if (x.style.display === "none") 
+			{
+        			x.style.display = "block";
+    			} 
+		else 
+			{
+        			x.style.display = "none";
+    			}
 
 }
 
 function openForm2(){
-	document.getElementById("myForm2").style.display="block";
+	var x = document.getElementById("myForm2");
+	    	if (x.style.display === "none") 
+			{
+        			x.style.display = "block";
+    			} 
+		else 
+			{
+        			x.style.display = "none";
+    			}
+
 
 }
 
@@ -95,13 +120,15 @@ function submitForm2(e)
 
 //function to get the values
 
-function getInputsVal(id){
+function getInputsVal(id)
+{
 	return document.getElementById(id).value;
 }
 
 
 //Save message to firebase database
-function save(fname,lname,email,phone,apply){
+function save(fname,lname,email,phone,apply)
+{
 	var newnameref=internRef.push();
 	newnameref.set({
 		fname:fname,
@@ -112,7 +139,8 @@ function save(fname,lname,email,phone,apply){
 	})
 }
 
-function save2(fname,lname,email,phone,apply){
+function save2(fname,lname,email,phone,apply)
+{
 	var newnameref=fresherRef.push();
 	newnameref.set({
 		fname:fname,
@@ -123,7 +151,8 @@ function save2(fname,lname,email,phone,apply){
 	})
 }
 
-function save1(fname,lname,email,phone,apply){
+function save1(fname,lname,email,phone,apply)
+{
 	var newnameref=expRef.push();
 	newnameref.set({
 		fname:fname,
